@@ -22,7 +22,7 @@ _This part must be filled by participants with the technical clarifications abou
 ![ide_dl](https://github.com/LabibProjects/Bangladesh_Team-Electrobot/blob/main/other/ide_dl.png)
 - At first, we will have to download and install the most up-to-date version of the Arduino IDE on our computer. We can find the software at arduino.cc/en/Main/Software.
 
-![ide_set_1](https://github.com/LabibProjects/Bangladesh_Team-Electrobot/blob/main/other/ide_set_1.png) [ide_set_2](https://github.com/LabibProjects/Bangladesh_Team-Electrobot/blob/main/other/ide_set_2.png)
+![ide_set_1](https://github.com/LabibProjects/Bangladesh_Team-Electrobot/blob/main/other/ide_set_1.png)   |  ![ide_set_2](https://github.com/LabibProjects/Bangladesh_Team-Electrobot/blob/main/other/ide_set_2.png)
 - In our Arduino IDE, we need to go to File > Preferences, and then enter the following into the 'Additional Board Manager URLs' field. Finally, we click OK.
 `https://espressif.github.io/arduino-esp32/package_esp32_index.json`
 
@@ -32,10 +32,7 @@ _This part must be filled by participants with the technical clarifications abou
 ![ide_set_4](https://github.com/LabibProjects/Bangladesh_Team-Electrobot/blob/main/other/ide_set_4.png)
 - Now we will have to select our board so on the upper left side of IDE we will select our board, "ESP32 DEV MODULE" then we will select our prefered board where we have connected our JRC board.
 
-![ide_set_5](https://github.com/LabibProjects/Bangladesh_Team-Electrobot/blob/main/other/ide_dl.png)
-- Select the COM port, and open the sketch.
-
-![img5](https://github.com/LabibProjects/Bangladesh_Team-Electrobot/blob/main/other/ide_dl.png)
+![ide_set_5](https://github.com/LabibProjects/Bangladesh_Team-Electrobot/blob/main/other/ide_set_5.png)
 - Finally our task is to upload the code clicking "→" icon we upload our code. 
 
 - Now we can turn on the toggle switch after placing robot on track and it will start doing the laps.
