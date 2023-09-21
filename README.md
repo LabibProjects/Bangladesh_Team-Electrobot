@@ -3,7 +3,7 @@ Engineering materials
 
 This repository contains engineering materials of a self-driven vehicle's model participating in the WRO Future Engineers competition in the season 2022.
 
-## Content
+## Contents
 
 * `t-photos` contains 2 photos of the team (an official one and one funny photo with all team members)
 * `v-photos` contains 6 photos of the vehicle (from every side, from top and bottom)
@@ -17,10 +17,25 @@ This repository contains engineering materials of a self-driven vehicle's model 
 
 _This part must be filled by participants with the technical clarifications about the code: which modules the code consists of, how they are related to the electromechanical components of the vehicle, and what is the process to build/compile/upload the code to the vehicle’s controllers._
 
-## How to prepare the repo based on the template
+## Software Setup Procedure
 
-_Remove this section before the first commit to the repository_
+![ide_dl](https://github.com/LabibProjects/Bangladesh_Team-Electrobot/blob/main/other/ide_dl.png)
+- At first, we will have to download and install the most up-to-date version of the Arduino IDE on our computer. We can find the software at arduino.cc/en/Main/Software.
 
-1. Clone this repo by using the `git clone` functionality.
-2. Remove `.git` directory
-3. [Initialize a new public repository on GitHub](https://github.com/new) by following instructions from "create a new repository on the command line" section (appeared after pressing "Create repository" button).
+![ide_set_1](https://github.com/LabibProjects/Bangladesh_Team-Electrobot/blob/main/other/ide_set_1.png) ![ide_set_2](https://github.com/LabibProjects/Bangladesh_Team-Electrobot/blob/main/other/ide_set_2.png)
+- In our Arduino IDE, we need to go to File > Preferences, and then enter the following into the 'Additional Board Manager URLs' field. Finally, we click OK.
+`https://espressif.github.io/arduino-esp32/package_esp32_index.json`
+
+![ide_set_3](https://github.com/LabibProjects/Bangladesh_Team-Electrobot/blob/main/other/ide_set_3.png)
+- On the left side of our IDE we will have to open our Board Manager . Press install button for the "ESP32 by Espressif Systems".
+
+![ide_set_4](https://github.com/LabibProjects/Bangladesh_Team-Electrobot/blob/main/other/ide_set_4.png)
+- Now we will have to select our board so on the upper left side of IDE we will select our board, "ESP32 DEV MODULE" then we will select our prefered board where we have connected our JRC board.
+
+![ide_set_5](https://github.com/LabibProjects/Bangladesh_Team-Electrobot/blob/main/other/ide_dl.png)
+- Select the COM port, and open the sketch.
+
+![img5](https://github.com/LabibProjects/Bangladesh_Team-Electrobot/blob/main/other/ide_dl.png)
+- Finally our task is to upload the code clicking "→" icon we upload our code. 
+
+- Now we can turn on the toggle switch after placing robot on track and it will start doing the laps.
