@@ -21,11 +21,6 @@
 #define clockwise 1
 #define anticlockwise 0
 
-#define ORANGE_LINE 1
-#define BLUE_LINE 2
-
-#define robot_width 15
-#define robot_length 1000
 ///////////////////////////////////////////////////////////////////////
 
 int yawAngle = 0, startAngle = 0;
@@ -34,11 +29,9 @@ unsigned long DisTimer = 0, MPUtimer = 0, lapTimer = 0;
 
 int mainSpeed = 120;
 bool start = false;
-long LD, RD , pre_LD = 0, pre_RD = 0;
+long LD, RD;
 char dir;
-int ID1 = 1, first_line = 0 , first_flag = 0;  // 1 - orange 2- blue
-int startAngle90 , rotateAngle;
-int rotate90_flag = 0;
+int ID1 = 1;
 //void Get_yawAngle();
 ///////////////////////////////////////////////////////////////////////
 MPU6050 mpu(Wire);
@@ -71,11 +64,8 @@ void setup () {
 
   motor1.pwm = 70;
   motor1.front();
-  //Rotate(20, clockwise);
-  Get_Distance();
-  pre_LD = LD; pre_RD = RD;
+  Rotate(20, clockwise);
   Get_yawAngle();
-  HuskyLens_Test();
   start = true;
 }
 
@@ -84,53 +74,7 @@ int endAngleReached = 0;
 void loop () {
   Get_Distance();
   Get_yawAngle();
-
-  /////////////////// Rotate direction check /////////////////
-
-  if( huskylens.request(ORANGE_LINE) && first_flag == 0 ) {
-    first_flag = 1;
-    first_line = ORANGE_LINE;
-  }
-  else if( huskylens.request(BLUE_LINE) && first_flag == 0 ) {
-    first_flag = 1;
-    first_line = BLUE_LINE;
-  }
-/////////////////////// 90 degree Rotate ///////////////////////
-
-  if( first_line == ORANGE_LINE ) {
-    if( RD == 0 || RD > MAX_DISTANCE ||  RD > (pre_RD + robot_width) ) {
-        delay(robot_length);
-        rotate90_flag = 1;
-        Rotate(20, clockwise);
-        mpu.update();
-        startAngle90 = abs(mpu.getAngleZ());
-        while(1) {
-           mpu.update();           
-           rotateAngle = abs(mpu.getAngleZ()) - startAngle90;
-           if( rotateAngle > 89 ) break;
-        }        
-        Rotate(0, clockwise);
-        rotate90_flag = 0;
-    }
-  }
-
-  else if( first_line == BLUE_LINE ) {
-    if( LD == 0 || LD > MAX_DISTANCE ||  LD > (pre_LD + robot_width) ) {
-        delay(robot_length);
-        rotate90_flag = 1;
-        Rotate(20, anticlockwise);
-        mpu.update();
-        startAngle90 = abs(mpu.getAngleZ());
-        while(1) {
-           mpu.update();           
-           rotateAngle = abs(mpu.getAngleZ()) - startAngle90;
-           if( rotateAngle > 89 ) break;
-        }
-        Rotate(0, anticlockwise);
-        rotate90_flag = 0;
-    }
-  }
-
+  HuskyLens_Test();
   if (yawAngle > endAngle - 18 && yawAngle < endAngle + 18) {
     endAngleReached++;
     Serial.println(String() + F("Lap: ") + endAngleReached );
@@ -147,7 +91,7 @@ void loop () {
 void Rotate(int angle, int dir ) {
   if( dir == clockwise ) angle += 90;
   else angle = 90 - angle;
-  myservo.write(angle);
+  myservo.writeMicroseconds(angle);
 }
 
 ///////////////////////   HuskyLens Test    ////////////////////
@@ -161,7 +105,6 @@ void HuskyLens_Test() {
 ///////////   Get Left and Right Distance per 50ms ///////////////
 void Get_Distance() {
     if( millis() - DisTimer > 50) {
-      pre_LD = LD ; pre_RD = RD;
       LD = sonarL.ping_cm();    
       RD = sonarR.ping_cm();
       Serial.println( String() + F("LeftDistance = ") + LD);
