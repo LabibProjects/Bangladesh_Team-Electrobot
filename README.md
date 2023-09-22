@@ -23,7 +23,7 @@ This repository contains engineering materials of a self-driven vehicle's model 
 * `Power and Sense Management` contains discussion about the power supply and sensors used in the vehicle.
 * `Obstacle Management` include the strategy for the vehicle to negotiate the obstacle course for all the challenges.
 * `other` is for other files which can be used to understand how to prepare the vehicle for the competition. It may include documentation how to connect to a SBC/SBM and upload files there, datasets, hardware specifications, communication protocols descriptions etc. If there is nothing to add to this location, the directory can be removed.
-
+----
 ## Introduction 
 
 The "Electrobot Autonomous Vehicle" project is an innovative endeavor that combines cutting-edge technologies to create a self-guided vehicle capable of intelligent navigation. This repository serves as a central hub for all essential files, documentation, and information related to the project.The project utilizes an ESP32-based development board known as the "JRC Board." This versatile and powerful board forms the foundation of the vehicle's control system.To enable advanced object recognition capabilities, the vehicle is equipped with a DFROBOT Gravity Huskylens, an AI-based camera. This camera plays a crucial role in identifying and interacting with objects in the vehicle's environment.The project incorporates an MPU-6050 gyroscope and accelerometer sensor. This sensor suite provides critical data for lap counting and monitoring angular velocity. The angular velocity measurements are given in millivolts per degree per second (mV/deg/s).
@@ -43,7 +43,7 @@ We have choosed the parts very carefully after several hours of R&D
 + XL 4015 Boost Converter
 + 3s Lipo Battery 11.1v 
 
-
+----
 ## Software Setup Procedure
 
 ![ide_dl](https://github.com/LabibProjects/Bangladesh_Team-Electrobot/blob/main/other/ide_dl.png)
