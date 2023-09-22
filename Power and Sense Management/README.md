@@ -4,7 +4,7 @@ In the realm of robotics, effective power and sense management is the linchpin o
 
 ## 1. Power Management: 
    ![System_management](https://github.com/LabibProjects/Bangladesh_Team-Electrobot/assets/133244520/7614dabe-5a59-4d6a-9cf0-2282a238b3df)
-
+   At first from lipo battery we are fetching 11.1v and being 12v by XL4015. then MP1184 are cosuming power to 5v for the sensor e.g. Huskylens, URM09 ultrasonic sensor and gyroscope. Laterby we are suplying 7v to servo 12v to BTS7960 and motor being powered to.
 ## 2. Sensors: 
 
 - #### **Ultrasonic Sensor:**
