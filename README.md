@@ -1,7 +1,12 @@
 # Engineering materials | Team Electrobots | Bangladesh
-=========================================================================
+----
 
 This repository contains engineering materials of a self-driven vehicle's model participating in the WRO Future Engineers competition in the season 2023.
+
+## Team Members:
+- Zuniyed Hossain Bhuiyan
+- L.M Mahir Labib
+- Tanvir Rahman Saad
 
 ## Contents
 
@@ -18,7 +23,7 @@ This repository contains engineering materials of a self-driven vehicle's model 
 
 ## Introduction
 
-_This part must be filled by participants with the technical clarifications about the code: which modules the code consists of, how they are related to the electromechanical components of the vehicle, and what is the process to build/compile/upload the code to the vehicle’s controllers._
+
 
 ## Software Setup Procedure
 
