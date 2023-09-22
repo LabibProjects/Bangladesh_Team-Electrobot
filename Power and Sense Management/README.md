@@ -2,6 +2,9 @@
 ====
 In the realm of robotics, effective power and sense management is the linchpin of our robot's performance. Our cutting-edge system ensures optimal resource allocation, revolutionizing how robots interact with their surroundings.
 
+## 1. Power Management: 
+   ![System_management](https://github.com/LabibProjects/Bangladesh_Team-Electrobot/assets/133244520/7614dabe-5a59-4d6a-9cf0-2282a238b3df)
+
 ## 2. Sensors: 
 
 - #### **Ultrasonic Sensor:**
